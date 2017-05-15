@@ -102,22 +102,29 @@ const findOrCreateSession = (fbid) => {
 
 // Our bot actions
 const actions = {
-  send({sessionId}, {text}, {entities}) {
-    console.log("bot replaaay", text);
+  send(request, response) {
+    //console.log("bot replaaay", text);
     // const confidence = JSON.entities && JSON.entities.intent &&
     //                 Array.isArray(JSON.entities.intent) &&
     //                 JSON.entities.intent.length > 0 &&
     //                 JSON.entities.intent[0].confidence;
 
-  console.log("ccccccccc",Array.isArray(JSON.entities.intent), JSON.entities);
+  //console.log("ccccccccc",Array.isArray(JSON.entities.intent), JSON.entities);
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
     const recipientId = sessions[sessionId].fbid;
+
+  //send(request, response) {
+    const {sessionId, context, entities} = request;
+    const {text, quickreplies} = response;
+    console.log('user said...,,,', request);
+    console.log('sending.,,,..', JSON.stringify(response));
+  //},
     if (recipientId) {
       // Yay, we found our recipient!
       // Let's forward our bot response to her.
       // We return a promise to let our bot know when we're done sending
-      return fbMessage(recipientId, text)
+      return fbMessage(recipientId, request.text)
       .then(() => null)
       .catch((err) => {
         console.error(
