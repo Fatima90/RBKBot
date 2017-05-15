@@ -116,7 +116,7 @@ const actions = {
   //send(request, response) {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
-    console.log('user said...,,,', request);
+    console.log('user said...,,,', request.intent[0]);
     console.log('sending.,,,..', JSON.stringify(response));
     const recipientId = sessions[sessionId].fbid;
   //},
