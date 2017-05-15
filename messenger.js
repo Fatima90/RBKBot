@@ -104,10 +104,10 @@ const findOrCreateSession = (fbid) => {
 const actions = {
   send({sessionId}, {text}) {
     console.log("bot replaaay", text);
-    const confidence = json.entities && json.entities.intent &&
-                    Array.isArray(json.entities.intent) &&
-                    json.entities.intent.length > 0 &&
-                    json.entities.intent[0].confidence;
+    const confidence = JSON.entities && JSON.entities.intent &&
+                    Array.isArray(JSON.entities.intent) &&
+                    JSON.entities.intent.length > 0 &&
+                    JSON.entities.intent[0].confidence;
 
   console.log("ccccccccc",confidence);
     // Our bot has something to say!
