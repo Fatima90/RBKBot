@@ -112,13 +112,13 @@ const actions = {
   //console.log("ccccccccc",Array.isArray(JSON.entities.intent), JSON.entities);
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
-    const recipientId = sessions[sessionId].fbid;
 
   //send(request, response) {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
     console.log('user said...,,,', request);
     console.log('sending.,,,..', JSON.stringify(response));
+    const recipientId = sessions[sessionId].fbid;
   //},
     if (recipientId) {
       // Yay, we found our recipient!
