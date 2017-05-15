@@ -108,7 +108,7 @@ const actions = {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
     if(request.entities){
-      console.log("user said...",request.entities.intent[0]);
+      console.log("user said...",request.entities);
     }else{
       console.log("user said2...,,,",request)
     }
