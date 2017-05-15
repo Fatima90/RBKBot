@@ -104,6 +104,12 @@ const findOrCreateSession = (fbid) => {
 const actions = {
   send({sessionId}, {text}) {
     console.log("bot replaaay", text);
+    const confidence = json.entities && json.entities.intent &&
+                    Array.isArray(json.entities.intent) &&
+                    json.entities.intent.length > 0 &&
+                    json.entities.intent[0].confidence;
+
+  console.log("ccccccccc",confidence);
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
     const recipientId = sessions[sessionId].fbid;
@@ -127,6 +133,7 @@ const actions = {
       return Promise.resolve()
     }
   },
+
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
 };
