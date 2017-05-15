@@ -28,5 +28,5 @@ const actions = {
   },
 };
 
-const client = new Wit({"7VWRGN6T46UHD5ILRYSBFMIXTALUUEBV", actions});
+const client = new Wit({accessToken, actions});
 interactive(client);
