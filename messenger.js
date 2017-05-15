@@ -104,10 +104,12 @@ const findOrCreateSession = (fbid) => {
 const actions = {
   send({sessionId}, {text}) {
     console.log("bot replaaay", text);
-    const confidence = JSON.entities.intent[0].confidence;
-    const smthg= JSON.entities;
+    // const confidence = JSON.entities && JSON.entities.intent &&
+    //                 Array.isArray(JSON.entities.intent) &&
+    //                 JSON.entities.intent.length > 0 &&
+    //                 JSON.entities.intent[0].confidence;
 
-  console.log("ccccccccc",confidence , smthg);
+  console.log("ccccccccc",Array.isArray(JSON.entities.intent), JSON.entities);
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
     const recipientId = sessions[sessionId].fbid;
