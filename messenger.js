@@ -120,7 +120,6 @@ const actions = {
           ':',
           err.stack || err
         );
-        console.log("texxxxt", text);
       });
     } else {
       console.error('Oops! Couldn\'t find user for session:', sessionId);

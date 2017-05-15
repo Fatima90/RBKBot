@@ -28,5 +28,7 @@ const actions = {
   },
 };
 
-const client = new Wit({accessToken, actions});
+const apiVersion=20160516;
+
+const client = new Wit({accessToken, actions, apiVersion});
 interactive(client);
