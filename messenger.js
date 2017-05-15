@@ -37,7 +37,7 @@ const PORT = process.env.PORT || 8445;
 const WIT_TOKEN = "PYXTTSIPB2OKB3D6F4WYGEOXFSGMWIS6";
 
 // Messenger API parameters
-const FB_PAGE_TOKEN = "EAAND1xDzMrYBAMaLOc8cmQUwQgTsaAkRE6AmVw8sYJ13dBcSpOI64QnL34xn51dLIKvCxwGQY4pHB7zWpXojZCPVvmEFcTpb8kKPcfi2bN2fxz9b4tueZBA6MjYdkYTkYh6XzMEeq1Og5rNY2ODzb1zf31K40U8wkLThZB13wZDZD";
+const FB_PAGE_TOKEN = "EAAND1xDzMrYBAMnPzZAeVSvtyY9ciBq9jNNsxSwjbREYEeO8GjQHx7s3oI71slK9eiZBLxUBhZCf6TLKOiNbKrYvw57nn90sDIybfR4YxILEEwvZCZB0tTanAmPZCHaa2zRw9IZC9r6QR93L0HWpp5DX4u3l5FUO8yxvwwnGG6GIAZDZD";
 if (!FB_PAGE_TOKEN) { throw new Error('missing FB_PAGE_TOKEN') }
 const FB_APP_SECRET = "9b13dcd562e0795af8faff3f842b0bd6";
 if (!FB_APP_SECRET) { throw new Error('missing FB_APP_SECRET') }
@@ -253,3 +253,7 @@ function verifyRequestSignature(req, res, buf) {
 
 app.listen(PORT);
 console.log('Listening on :' + PORT + '...');
+
+//https://cryptic-springs-96346.herokuapp.com/webhook
+
+//https://bots.api.ai/facebook/c5ae1726-69b8-418b-8265-cf0224e527fc/webhook
