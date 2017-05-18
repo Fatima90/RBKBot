@@ -108,9 +108,10 @@ const actions = {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
     if(request.entities){
-      console.log("user said...",request.text,request.entities);
+      console.log("user said...",response,request.entities);
+
     }else{
-      console.log("user said2...,,,",request)
+      console.log("user said2...,,,",response,request)
     }
     const recipientId = sessions[sessionId].fbid;
     if (recipientId) {
