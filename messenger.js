@@ -109,7 +109,7 @@ const actions = {
     const {text, quickreplies} = response;
     if(request.entities || request.entities.intent){
       console.log("user said...",request.text,request.entities);
-        if(request.entities.intent.length > 0){
+        if(request.entities.intent){
           for(var i=0;i < request.entities.intent.length; i++){
             console.log("iiiiiii",request.entities.intent[i].confidence)
             if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
