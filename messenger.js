@@ -109,19 +109,22 @@ const actions = {
     const {text, quickreplies} = response;
     if(request.entities){
       console.log("user said...",request.text,request.entities);
-      if(request.entities.intent.length > 0){
-        for(var i=0;i < request.entities.intent.length; i++){
-          console.log("iiiiiii",request.entities.intent[i].confidence)
-          if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
-            response.text= "I didn't get your quetion, please rephrase it"
+      if(request.entities){
+        if(request.entities.intent.length > 0){
+          for(var i=0;i < request.entities.intent.length; i++){
+            console.log("iiiiiii",request.entities.intent[i].confidence)
+            if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
+              response.text= "I didn't get your quetion, please rephrase it"
+            }
           }
-        }
+          }else{
+          response.text= "I didn't get your quetion, please rephrase it"
+          }
       }else{
         response.text= "I didn't get your quetion, please rephrase it"
       }
 
         console.log("iiiiiii",request.entities.intent[0].confidence);
-
 
     }else{
       console.log("user said2...,,,",request)
