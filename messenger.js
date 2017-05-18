@@ -119,11 +119,7 @@ const actions = {
         }else{
           response.text= "I didn't get your qusetion, please rephrase it"
         }
-      }else{
-        response.text= "I didn't get your qusetion, please rephrase it"
-      }
-
-        console.log("iiiiiii",request.entities.intent[0].confidence);
+        console.log("iiiiiii2",request.entities.intent[0].confidence);
 
     }else{
       console.log("user said2...,,,",request)
