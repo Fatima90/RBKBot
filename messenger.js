@@ -122,7 +122,7 @@ const actions = {
 
           response.text= "I didn't get your qusetion, please rephrase it"
         }
-        console.log("iiiiiii2",request.entities.intent[0].confidence);
+        console.log("iiiiiii2",request.entities);
 
     }else{
       console.log("user said2...,,,",request)
