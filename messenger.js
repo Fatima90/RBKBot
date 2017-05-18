@@ -108,10 +108,18 @@ const actions = {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
     if(request.entities){
-      console.log("user said...",response,request.entities);
+      console.log("user said...",request.text,request.entities);
+      for(var i=0;i < request.entities.length; i++){
+        console.log("iiiiiii"request.entities[i].confidence)
+        if(request.entities[i].confidence.toFixed(1) <= 0.7){
+          response.text= "I didn't get your quetion, please rephrase it"
+        }
+      }
+        console.log("iiiiiii",request.entities[0].confidence);
+
 
     }else{
-      console.log("user said2...,,,",response,request)
+      console.log("user said2...,,,",request)
     }
     const recipientId = sessions[sessionId].fbid;
     if (recipientId) {
