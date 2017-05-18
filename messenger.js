@@ -113,10 +113,13 @@ const actions = {
           for(var i=0;i < request.entities.intent.length; i++){
             console.log("iiiiiii",request.entities.intent[i].confidence)
             if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
+              console.log('just ot know 1')
               response.text= "I didn't get your qusetion, please rephrase it"
             }
           }
         }else{
+              console.log('just ot know 2')
+
           response.text= "I didn't get your qusetion, please rephrase it"
         }
         console.log("iiiiiii2",request.entities.intent[0].confidence);
