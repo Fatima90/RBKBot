@@ -114,16 +114,13 @@ const actions = {
             console.log("iiiiiii",request.entities.intent[i].confidence)
             if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
               console.log('just ot know 1')
-              response.text= "I didn't get your qusetion, please rephrase it"
+              response.text= "لم أستطع فهم السؤال, يرجى إعادة صياغه السؤال بطريقة مبسطة , لأي معلومات عن طلب التسجيل الخاص يرجى إرسال ايميل على البريد الإلكتروني info@rbk.org. I didn't get your qusetion, please rephrase it in a simple way or if you have any questions regarding your application please send an email to info@rbk.org"
             }
           }
         }else{
-              console.log('just ot know 2')
-
-          response.text= "I didn't get your qusetion, please rephrase it"
+          console.log('just ot know 2')
+          response.text= "لم أستطع فهم السؤال, يرجى إعادة صياغه السؤال بطريقة مبسطة , لأي معلومات عن طلب التسجيل الخاص يرجى إرسال ايميل على البريد الإلكتروني info@rbk.org. I didn't get your qusetion, please rephrase it in a simple way or if you have any questions regarding your application please send an email to info@rbk.org"
         }
-        console.log("iiiiiii2",request.entities);
-
     }else{
       console.log("user said2...,,,",request)
     }
