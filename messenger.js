@@ -35,7 +35,6 @@ const PORT = process.env.PORT || 8445;
 
 // Wit.ai parameters
 const WIT_TOKEN = "PYXTTSIPB2OKB3D6F4WYGEOXFSGMWIS6";
-
 // Messenger API parameters
 const FB_PAGE_TOKEN = "EAAND1xDzMrYBAIZBzBIOLBVEP9ZA2ElO5E31JHZBn4BqonsNZBRZBqCtOzp0mfL0CVnmDV5RLlsYXCCO9EXPTGJngTJUZBrZAQUQYBOok1kX2NS2tgPrbMdu6B4ZCZCI9Phm03fWj9vZC6mDsoiOZB1D469UcGIZBlFyYZBv6PvCZCOIILWAZDZD";
 if (!FB_PAGE_TOKEN) { throw new Error('missing FB_PAGE_TOKEN') }
@@ -114,12 +113,12 @@ const actions = {
             console.log("iiiiiii",request.entities.intent[i].confidence)
             if(request.entities.intent[i].confidence.toFixed(1) <= 0.7){
               console.log('just ot know 1')
-              response.text= "لم أستطع فهم السؤال, يرجى إعادة صياغه السؤال بطريقة مبسطة , لأي معلومات عن طلب التسجيل الخاص يرجى إرسال ايميل على البريد الإلكتروني info@rbk.org. I didn't get your qusetion, please rephrase it in a simple way or if you have any questions regarding your application please send an email to info@rbk.org"
+              response.text= ""
             }
           }
         }else{
           console.log('just ot know 2')
-          response.text= "لم أستطع فهم السؤال, يرجى إعادة صياغه السؤال بطريقة مبسطة , لأي معلومات عن طلب التسجيل الخاص يرجى إرسال ايميل على البريد الإلكتروني info@rbk.org. I didn't get your qusetion, please rephrase it in a simple way or if you have any questions regarding your application please send an email to info@rbk.org"
+          response.text= "";
         }
     }else{
       console.log("user said2...,,,",request)
