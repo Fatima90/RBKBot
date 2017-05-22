@@ -108,8 +108,8 @@ const actions = {
     const {text, quickreplies} = response;
     if(request.entities || request.entities.intent){
       console.log("user said...",request.text,request.entities);
-      var usersays=request.text.split('/n');
-      console.log(usersays,request.text);
+      var usersays=request.text.split('\n');
+      console.log(usersays,usersays.length,request.text);
         if(request.entities.intent){
           for(var i=0;i < request.entities.intent.length; i++){
             console.log("iiiiiii",request.entities.intent[i].confidence)
